@@ -1,0 +1,6 @@
+deploy:
+  stage: deploy
+  script:
+    - ssh gitlab-runner@146.59.150.135 "docker-compose pull && docker-compose up -d"
+  only:
+    - main
